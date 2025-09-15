@@ -1,3 +1,4 @@
+import { asset } from "$app/paths";
 import JSZip from "jszip";
 import * as THREE from "three";
 import { exportTo3MF } from "three-3mf-exporter";
@@ -66,7 +67,7 @@ export class ModelRenderer {
 	): void {
 		const loader = new FontLoader();
 
-		loader.load("/fonts/helvetiker_regular.typeface.json", (font: Font) => {
+		loader.load(asset("/fonts/helvetiker_regular.typeface.json"), (font: Font) => {
 			const geometry = new TextGeometry(text, {
 				font,
 				size,
@@ -282,7 +283,7 @@ export class ModelRenderer {
 	resizeText(id: string, size: number): void {
 		const loader = new FontLoader();
 
-		loader.load("/fonts/helvetiker_regular.typeface.json", (font: Font) => {
+		loader.load(asset("/fonts/helvetiker_regular.typeface.json"), (font: Font) => {
 			const geometry = new TextGeometry(this.texts[id], {
 				font,
 				size,
