@@ -309,7 +309,7 @@
 			/>
 		</InputSection>
 	</div>
-	<div class=" col-span-2 mt-6 ml-auto lg:mt-2">
+	<div class="col-span-2 mx-auto mt-6">
 		<button
 			onclick={goBackPage}
 			class="ml-auto w-48 rounded-lg bg-gray-500 px-2 py-1 text-2xl text-white hover:bg-gray-500/50"

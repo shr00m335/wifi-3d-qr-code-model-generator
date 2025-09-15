@@ -39,8 +39,8 @@
 
 <div class="flex h-full w-full flex-col lg:grid lg:grid-cols-2">
 	<canvas bind:this={canvas} class="mx-auto lg:m-auto" width="500" height="500"></canvas>
-	<div class="mx-auto mt-5 flex h-[500px] flex-col lg:mx-0 lg:my-auto lg:w-7/12">
-		<h2 class="text-2xl font-bold">Export Options:</h2>
+	<div class="mx-auto mt-5 flex flex-col lg:mx-0 lg:my-auto lg:h-[500px] lg:w-7/12">
+		<h2 class="text-2xl font-bold">Export:</h2>
 		<SelectInput
 			id="format-select"
 			label="Export Format:"
@@ -57,17 +57,17 @@
 			]}
 			bind:value={exportModelType}
 		/>
-		<div class="mx-auto mt-10 flex lg:mt-auto lg:ml-auto">
-			<button
-				onclick={() => ($currentPageStore = Pages.ModelPreview)}
-				class="ml-0 w-48 rounded-lg bg-gray-500 px-2 py-1 text-2xl text-white hover:bg-gray-500/50 lg:ml-auto"
-				>Back
-			</button>
-			<button
-				onclick={exportModel}
-				class="ml-4 w-56 rounded-lg bg-blue-600 px-2 py-1 text-2xl text-white hover:bg-blue-600/50"
-				>Download Model
-			</button>
-		</div>
+	</div>
+	<div class="mx-auto mt-10 lg:col-span-2">
+		<button
+			onclick={() => ($currentPageStore = Pages.ModelPreview)}
+			class="ml-0 w-48 rounded-lg bg-gray-500 px-2 py-1 text-2xl text-white hover:bg-gray-500/50 lg:ml-auto"
+			>Back
+		</button>
+		<button
+			onclick={exportModel}
+			class="ml-4 w-56 rounded-lg bg-blue-600 px-2 py-1 text-2xl text-white hover:bg-blue-600/50"
+			>Download Model
+		</button>
 	</div>
 </div>

@@ -8,7 +8,7 @@
 </script>
 
 <div
-	class="flex h-full w-screen flex-col items-center bg-[#EFEFEF] px-2 py-2 font-nunito-sans lg:h-screen"
+	class="flex h-full min-h-screen flex-col items-center bg-[#EFEFEF] px-2 py-4 font-nunito-sans lg:w-screen"
 >
 	<h1 class="w-full text-center text-2xl md:text-3xl">WiFi QR Code 3D Model Generator</h1>
 

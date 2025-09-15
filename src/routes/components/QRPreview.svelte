@@ -105,16 +105,16 @@
 	};
 </script>
 
-<div class="flex h-full w-full flex-col lg:grid lg:grid-cols-2">
-	<div class="mt-5 flex flex-col items-center justify-center lg:mt-0">
-		<canvas bind:this={canvas} width={300} height={300}></canvas>
-		<h3 class="mt-4 text-xl">Scan the QR Code with a phone to verify</h3>
+<div class="my-auto flex h-full w-full flex-col lg:grid lg:grid-cols-2">
+	<div class="mt-5 flex flex-col items-center justify-center lg:my-auto lg:mt-0">
+		<canvas bind:this={canvas} class="h-[200px] w-[200px] lg:h-[300px] lg:w-[300px]"></canvas>
+		<h3 class="text-md mt-4 lg:text-xl">Scan the QR Code with a phone to verify</h3>
 	</div>
-	<div class="mt-5 flex flex-col items-center justify-center lg:mt-0">
+	<div class="mt-10 flex flex-col items-center justify-center lg:mt-0">
 		<div class="flex flex-col lg:h-[360px]">
-			<h2 class="mr-auto text-2xl font-bold">QR Code Option:</h2>
+			<h2 class="mx-auto text-2xl font-bold lg:mr-auto lg:ml-0">QR Code Option:</h2>
 			<div
-				class="flex w-min flex-col text-xl lg:grid lg:grid-cols-[auto_320px] lg:gap-x-4 lg:gap-y-3"
+				class="mt-2 flex w-min flex-col text-xl lg:mx-0 lg:ml-0 lg:grid lg:grid-cols-[auto_320px] lg:gap-x-4 lg:gap-y-3"
 			>
 				<label for="error-level-input mt-2 lg:mt-0" class="my-auto text-nowrap"
 					>Error Correction Level:</label
@@ -140,18 +140,18 @@
 					class="my-auto mr-auto h-7 w-7 cursor-pointer rounded-lg bg-white px-2 py-1"
 				/> -->
 			</div>
-			<div class="mt-10 flex lg:mt-auto">
-				<button
-					onclick={goBackPage}
-					class="ml-auto w-48 rounded-lg bg-gray-500 px-2 py-1 text-2xl text-white hover:bg-gray-500/50"
-					>Back
-				</button>
-				<button
-					onclick={nextPage}
-					class="ml-4 w-48 rounded-lg bg-blue-600 px-2 py-1 text-2xl text-white hover:bg-blue-600/50"
-					>Next
-				</button>
-			</div>
 		</div>
+	</div>
+	<div class="col-span-2 mx-auto mt-10 flex">
+		<button
+			onclick={goBackPage}
+			class="ml-auto w-48 rounded-lg bg-gray-500 px-2 py-1 text-2xl text-white hover:bg-gray-500/50"
+			>Back
+		</button>
+		<button
+			onclick={nextPage}
+			class="ml-4 w-48 rounded-lg bg-blue-600 px-2 py-1 text-2xl text-white hover:bg-blue-600/50"
+			>Next
+		</button>
 	</div>
 </div>
